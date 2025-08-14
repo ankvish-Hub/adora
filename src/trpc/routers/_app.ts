@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { baseProcedure, createTRPCRouter } from '../init';
-import { inngest } from '../../inngest/client';
+import { inngest } from '@/inngest/client';
+
 export const appRouter = createTRPCRouter({
   invoke: baseProcedure
     .input(
@@ -14,16 +15,15 @@ export const appRouter = createTRPCRouter({
         data: {
           email: input.text,
         },
-      })
+      });
       return { ok: "success" };
     }),
-
 
   createAI: baseProcedure
     .input(
       z.object({
         text: z.string(),
-      }),
+      })
     )
     .query((opts) => {
       return {
@@ -31,5 +31,6 @@ export const appRouter = createTRPCRouter({
       };
     }),
 });
+
 // export type definition of API
 export type AppRouter = typeof appRouter;
