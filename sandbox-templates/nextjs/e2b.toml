@@ -1,0 +1,17 @@
+# This is a config for E2B sandbox template.
+# You can use template ID (2sjs9y4gffgk9fce8o8l) or template name (adora-nextjs-test-2) to create a sandbox:
+
+# Python SDK
+# from e2b import Sandbox, AsyncSandbox
+# sandbox = Sandbox("adora-nextjs-test-2") # Sync sandbox
+# sandbox = await AsyncSandbox.create("adora-nextjs-test-2") # Async sandbox
+
+# JS SDK
+# import { Sandbox } from 'e2b'
+# const sandbox = await Sandbox.create('adora-nextjs-test-2')
+
+team_id = "7ddf701e-5d99-467b-bd3b-7655f680380e"
+start_cmd = "/compile_page.sh"
+dockerfile = "e2b.Dockerfile"
+template_name = "adora-nextjs-test-2"
+template_id = "2sjs9y4gffgk9fce8o8l"
